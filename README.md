@@ -26,12 +26,6 @@ cp terraform.tfvars.example terraform.tfvars
 | `aiven_project_name`    | Name of your existing Aiven project  | (required)              |
 | `postgres_service_name` | Name of the PostgreSQL service       | `example-us-pg-service` |
 
-`terraform.tfvars` is in `.gitignore`, so your token stays out of the repo. You can also skip the file for the token and set it as an environment variable:
-
-```bash
-export TF_VAR_aiven_token="your-token"
-```
-
 ## Run
 
 Download the Aiven provider:
@@ -52,3 +46,4 @@ Create the service (it takes a few minutes to start):
 terraform apply
 ```
 
+You should now be able to see the service building in the Aiven console.
